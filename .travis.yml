@@ -17,7 +17,7 @@ after_success:
   - docker build -t sjmdock/docker-nginx ./nginx
 
   - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_ID" --password-stdin
-s
+
   - docker push sjmdock/docker-frontend
   - docker push sjmdock/docker-backend
   - docker push sjmdock/docker-nginx
