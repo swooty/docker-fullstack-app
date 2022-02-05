@@ -22,3 +22,14 @@ after_success:
   - docker push sjmdock/docker-backend
   - docker push sjmdock/docker-nginx
 
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-northeast-1"
+  app: "docker-fullstack-app"
+  env: "Dockerfullstackapp-env"
+  bucket_name: $DEPLOY_BUCKET_NAME
+  bucket_path: "docker-fullstack-app"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
