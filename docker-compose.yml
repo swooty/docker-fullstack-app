@@ -34,6 +34,7 @@ services:
       MYSQL_DATABASE: myapp
       MYSQL_PORT: 3306
 
+  # AWS에 deploy할떄는 전용RDS를 사용하므로 이부분을 주석처리한다
   # mysql:
   #   build: ./mysql
   #   restart: unless-stopped
@@ -44,5 +45,5 @@ services:
   #     - ./mysql/mysql_data:/var/lib/mysql
   #     - ./mysql/sqls/:/docker-entrypoint-initdb.d/
   #   environment:
-  #     MYSQL_ROOT_PASSWORD: sonjm
+  #     MYSQL_ROOT_PASSWORD: sjm_mysql2022
   #     MYSQL_DATABASE: myapp

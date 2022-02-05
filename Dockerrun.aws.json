@@ -20,7 +20,7 @@
             "image": "sjmdock/docker-nginx",
             "hostname": "nginx",
             "essential": true,
-            "postMappings": [
+            "portMappings": [
                 {
                     "hostPort": 80,
                     "containerPort": 80
